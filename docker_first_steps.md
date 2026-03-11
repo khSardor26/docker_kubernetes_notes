@@ -439,45 +439,27 @@ Typical deployment process:
 # Docker vs Kubernetes
 
 Feature
-
 Docker
-
 Kubernetes
-
 Purpose
-
 Container runtime
-
 Container orchestration
-
 Scale
-
 Single machine
-
 Cluster
-
 Complexity
-
 Low
-
 High
-
 Automation
-
 Basic
-
 Advanced
-
 Docker builds and runs containers.
-
 Kubernetes **manages containers at scale**.
 
 ----------
 
 # Real World Example
-
 Example production system:
-
 Frontend (React)  
 ↓  
 API Gateway  
@@ -488,73 +470,26 @@ Microservices
  ├── Order Service  
 ↓  
 Databases
-
 Each service runs inside **Docker containers** and is managed by **Kubernetes**.
 
 ----------
 
 # Benefits of Docker + Kubernetes
-
 ### Consistency
-
 Runs the same everywhere.
-
 ### Scalability
-
 Handles thousands of containers.
-
 ### Fault tolerance
-
 Automatically replaces failed containers.
-
 ### Portability
-
 Works across cloud providers.
 
 ----------
 
-# Popular Tools in the Ecosystem
-
-Tool
-
-Purpose
-
-Docker
-
-container runtime
-
-Kubernetes
-
-container orchestration
-
-Helm
-
-Kubernetes package manager
-
-Prometheus
-
-monitoring
-
-Grafana
-
-visualization
-
-Istio
-
-service mesh
-
-----------
-
 # Conclusion
-
 Docker and Kubernetes together form the foundation of **modern cloud-native systems**.
-
 Docker solves the problem of:
-
 > "How do we package and run applications?"
-
 Kubernetes solves the problem of:
-
 > "How do we manage thousands of containers in production?"
-
 Understanding both technologies is essential for modern **backend engineers, DevOps engineers, and cloud architects**.
