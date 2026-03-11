@@ -1,52 +1,37 @@
-# 🐳 Docker & ☸️ Kubernetes — Complete Introduction  
+# 🐳 Docker & ☸️ Kubernetes — Introduction  
   
 ## 📌 Overview  
-  
 Modern software development increasingly relies on **containerization** and **container orchestration**. Two of the most important technologies in this ecosystem are:  
-  
 - **Docker** — a platform for building and running containers  
-- **Kubernetes** — a system for managing and orchestrating containers at scale  
-  
+- **Kubernetes** — a system for managing and orchestrating containers at scale   
 Together they form the backbone of modern **cloud-native infrastructure** used by companies like **Google, Netflix, Amazon, and Spotify**.  
   
 ---  
   
-# 🐳 What is Docker?  
-  
-## Definition  
-  
+# 🐳 What is Docker?   
+## Definition   
 **Docker** is a platform that allows developers to package applications and their dependencies into **containers** so they can run consistently across different environments.  
-  
 In simple terms:  
-  
 > Docker ensures that an application runs the same on every machine.  
-  
-For example:  
-  
+For example:   
 A Java Spring Boot app that works on your laptop will also work on:  
-  
 - a Linux server  
 - a cloud VM  
 - a Kubernetes cluster  
-  
 without any configuration changes.  
   
 ---  
   
 # 📦 What is a Container?  
-  
 A **container** is a lightweight isolated environment that contains:  
-  
 - application code  
 - runtime  
 - libraries  
 - system tools  
 - dependencies  
-  
 Unlike virtual machines, containers **share the host OS kernel**, making them much faster and lighter.  
   
 ### Container vs Virtual Machine  
-  
 | Feature | Container | Virtual Machine |  
 |-------|-------|-------|  
 | OS Kernel | Shared | Separate |  
@@ -57,20 +42,13 @@ Unlike virtual machines, containers **share the host OS kernel**, making them mu
 ---  
   
 # 🧱 Docker Architecture  
-  
 Docker consists of several core components.  
-
 Developer → Docker CLI → Docker Daemon → Containers
 
-  
-## Docker Components  
-  
+## Docker Components    
 ### 1️⃣ Docker Client  
-  
 The **Docker CLI** is what developers interact with.  
-  
 Example commands:  
-  
 ```bash  
 docker build  
 docker run  
@@ -80,132 +58,84 @@ docker stop
 ----------
 
 ### 2️⃣ Docker Daemon
-
 The **Docker daemon** runs in the background and manages:
-
--   containers
-    
--   images
-    
--   volumes
-    
+-   containers 
+-   images  
+-   volumes  
 -   networks
     
-
 ----------
 
 ### 3️⃣ Docker Image
-
 A **Docker image** is a blueprint for a container.
-
 It contains:
-
 -   application code
-    
--   runtime
-    
--   dependencies
-    
+-   runtime 
+-   dependencies   
 -   environment configuration
-    
 
 Example:
-
 Spring Boot App  
 Java Runtime  
 Libraries
-
 Images are **immutable**.
 
 ----------
 
 ### 4️⃣ Docker Container
-
 A **container** is a running instance of a Docker image.
-
 Example:
-
 Image → docker run → Container
-
 ----------
 
 ### 5️⃣ Docker Registry
-
 A **registry** stores Docker images.
-
 Examples:
-
--   Docker Hub
-    
--   AWS ECR
-    
+-   Docker Hub   
+-   AWS ECR   
 -   Google Container Registry
     
-
 Example:
-
 docker pull postgres  
 docker push myapp:latest
 
 ----------
 
 # 📜 Dockerfile
-
 A **Dockerfile** defines how to build a Docker image.
-
 Example for a **Spring Boot application**:
 
 FROM eclipse-temurin:21-jre  
-  
 WORKDIR /app  
-  
 COPY target/app.jar app.jar  
-  
 EXPOSE 8080  
-  
 ENTRYPOINT ["java","-jar","app.jar"]
 
 Explanation:
-
 Command
-
 Purpose
-
 FROM
-
 base image
-
 WORKDIR
-
 working directory
-
 COPY
-
 copy files into container
-
 EXPOSE
-
 declare port
-
 ENTRYPOINT
-
 run command
 
 ----------
 
 # 🚀 Docker Workflow
-
 Typical workflow:
-
 1️⃣ Write application  
 2️⃣ Create Dockerfile  
 3️⃣ Build Docker image  
 4️⃣ Run container
 
 Example:
-
 docker build -t myapp .  
-  
 docker run -p  8080:8080 myapp
 
 ----------
