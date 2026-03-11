@@ -382,11 +382,8 @@ spec:
 # 🔄 Kubernetes Self-Healing
 
 Kubernetes automatically:
-
 -   restarts crashed containers
-    
 -   replaces failed nodes
-    
 -   reschedules pods
     
 
@@ -401,11 +398,8 @@ Kubernetes restarts it automatically
 # 📈 Kubernetes Scaling
 
 Scaling is automatic.
-
 Example:
-
 kubectl scale deployment spring-app --replicas=10
-
 Kubernetes will create **10 pods**.
 
 ----------
@@ -413,7 +407,6 @@ Kubernetes will create **10 pods**.
 # 🔄 Rolling Updates
 
 Kubernetes can update applications **without downtime**.
-
 Example:
 
 Old version running  
@@ -433,28 +426,6 @@ Typical deployment process:
 3️⃣ Create Kubernetes deployment  
 4️⃣ Expose service  
 5️⃣ Scale application
-
-----------
-
-# Docker vs Kubernetes
-
-Feature
-Docker
-Kubernetes
-Purpose
-Container runtime
-Container orchestration
-Scale
-Single machine
-Cluster
-Complexity
-Low
-High
-Automation
-Basic
-Advanced
-Docker builds and runs containers.
-Kubernetes **manages containers at scale**.
 
 ----------
 
