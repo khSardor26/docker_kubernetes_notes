@@ -143,88 +143,55 @@ docker run -p  8080:8080 myapp
 # 📦 Docker Volumes
 
 Containers are **stateless by default**.
-
 If a container stops, its data disappears.
-
 To persist data Docker uses **volumes**.
-
 Example:
-
 docker run -v postgres-data:/var/lib/postgresql/data postgres
-
 Volumes store data **outside the container lifecycle**.
 
 ----------
 
 # 🌐 Docker Networking
-
 Docker containers communicate using networks.
-
 Types:
-
 Network
-
 Description
-
 bridge
-
 default local network
-
 host
-
 uses host network
-
 overlay
-
 multi-host networking
-
 none
-
 no networking
 
 Example:
-
 docker network create my-network
 
 ----------
 
 # ☸️ What is Kubernetes?
-
 ## Definition
-
 **Kubernetes (K8s)** is an open-source system for **automating deployment, scaling, and management of containerized applications**.
-
 It was originally developed by **Google**.
-
 If Docker manages **one container**, Kubernetes manages **thousands of containers across many servers**.
 
 ----------
 
 # Why Kubernetes is Needed
-
 Running containers manually becomes difficult when applications grow.
-
 Problems:
-
 -   many containers
-    
 -   many servers
-    
 -   scaling traffic
-    
 -   restarting failed containers
-    
 -   rolling updates
-    
-
 Kubernetes solves these problems automatically.
 
 ----------
 
 # Kubernetes Architecture
-
 A Kubernetes cluster consists of two types of nodes.
-
 Cluster  
  ├── Control Plane  
  └── Worker Nodes
@@ -232,61 +199,38 @@ Cluster
 ----------
 
 # 🧠 Control Plane
-
 The **control plane** manages the cluster.
-
 Components:
-
 Component
-
 Role
-
 API Server
-
 entry point for commands
-
 Scheduler
-
 assigns pods to nodes
-
 Controller Manager
-
 maintains cluster state
-
 etcd
-
 cluster database
 
 ----------
 
 # ⚙️ Worker Nodes
-
 Worker nodes run the containers.
-
 Each node contains:
-
--   kubelet
-    
+-   kubelet 
 -   container runtime
-    
 -   kube-proxy
     
 
 ----------
 
 # 📦 Kubernetes Pod
-
 A **Pod** is the smallest deployable unit in Kubernetes.
-
 A pod can contain:
-
 -   one container
-    
 -   multiple containers
-    
 
 Example:
-
 Pod  
  ├── Spring Boot Container  
  └── Redis Sidecar
@@ -294,18 +238,12 @@ Pod
 ----------
 
 # Kubernetes Deployment
-
 A **Deployment** manages pods.
-
 Features:
-
--   scaling
-    
--   rolling updates
-    
+-   scaling  
+-   rolling updates 
 -   self-healing
     
-
 Example YAML:
 
 apiVersion: apps/v1  
