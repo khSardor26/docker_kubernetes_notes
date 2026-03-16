@@ -245,7 +245,6 @@ Features:
 -   self-healing
     
 Example YAML:
-
 apiVersion: apps/v1  
 kind: Deployment  
   
@@ -274,31 +273,18 @@ spec:
 ----------
 
 # 🌐 Kubernetes Service
-
 Pods are **ephemeral** (they change IP addresses).
-
 A **Service** provides a stable network endpoint.
-
 Types:
-
 Service
-
 Description
-
 ClusterIP
-
 internal service
-
 NodePort
-
 exposed on node
-
 LoadBalancer
-
 external load balancer
-
 Example:
-
 kind: Service  
 apiVersion: v1  
   
@@ -318,7 +304,6 @@ spec:
 ----------
 
 # 🔄 Kubernetes Self-Healing
-
 Kubernetes automatically:
 -   restarts crashed containers
 -   replaces failed nodes
