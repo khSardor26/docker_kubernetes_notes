@@ -1,1 +1,1 @@
-Welcome to the personal docker & kubernetes notes of mine .
+Welcome to the personal docker & kubernetes notes.
