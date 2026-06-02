@@ -1,1 +1,2 @@
-Welcome to the my docker & kubernetes notes.
+Welcome to the my docker & kubernetes notes,
+Feel free to share your knowledge too
